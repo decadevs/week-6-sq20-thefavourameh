@@ -25,7 +25,20 @@ class BorrowerServiceImplTest {
         borrowerServiceImpl.requestBook("Book Title", user, library);
         assertEquals(1, library.getBorrowers().size());
     }
+
+    @Test
+    void requestBookFIFO() {
+        BorrowerServiceImpl borrowerServiceImpl = new BorrowerServiceImpl();
+        User user = new User();
+
+        Library library = new Library();
+        library.setUserQueueFIFO(new LinkedList<>());
+
+        borrowerServiceImpl.requestBookFIFO("Book Title", user, library);
+        assertEquals(1, library.getUserQueueFIFO().size());
+    }
 }
+
 
 
 

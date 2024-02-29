@@ -24,11 +24,10 @@ public class Main {
 
                 Book book1 = new Book("Java Methods", "James Bloch", 3);
                 Book book2 = new Book("Looping in Java", "Damian Wonder", 5);
-                Book book3 = new Book("Intro to OOP", "MaryAnn Martins", 8);
+                Book book3 = new Book("Intro to OOP", "Mary-Ann Ukpengit ", 8);
 
 
-
-               Library library = new Library("Central Library", new ArrayList<>(), new PriorityQueue<>(), new LinkedList<>(), new User());
+                Library library = new Library("Central Library", new ArrayList<>(), new PriorityQueue<>(), new LinkedList<>(), new User());
 
 
                 library.setListOfBooks(List.of(book1, book2, book3));
@@ -36,10 +35,8 @@ public class Main {
                 LibraryService libraryService = new LibraryServiceImpl();
                 BorrowerService borrowerService = new BorrowerServiceImpl();
 
-             //   ((LibraryServiceImpl) libraryService).(library);
 
-
-              //GIVE BOOK
+                //GIVE BOOK
                 borrowerService.requestBook("Looping in Java", user1, library);
                 borrowerService.requestBook("Looping in Java", user2, library);
                 borrowerService.requestBook("Looping in Java", user3, library);
@@ -56,8 +53,6 @@ public class Main {
                 borrowerService.requestBookFIFO("Java Methods", user4, library);
 
                 libraryService.giveBookFIFO("Java Methods", library);
-
-
 
 
             }

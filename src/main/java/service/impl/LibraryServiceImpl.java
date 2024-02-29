@@ -49,7 +49,7 @@ import java.util.*;
                         System.out.println(user.getName() + " has borrowed " + titleOfBook);
                     } else {
                         try {
-                            System.out.println("Book is not available");
+                            System.out.println("Book is not available, check later");
                         } catch (Exception e) {
                             throw new LibraryException("Book is not available");
                         }
